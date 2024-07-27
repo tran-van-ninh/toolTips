@@ -68,7 +68,7 @@ body{
     top: 80%;
     content: "";
     display: block;
-    border: 20px solid transparent; /* Gộp các thuộc tính border vào một dòng */
+    border: 25px solid transparent; /* Gộp các thuộc tính border vào một dòng */
     border-top-color: var(--icon-color); /* Chỉ cạnh trên có màu */
     /* border-left: 25px solid transparent;
     border-right: 25px solid transparent;
