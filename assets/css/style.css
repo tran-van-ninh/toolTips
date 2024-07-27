@@ -1,0 +1,83 @@
+:root{
+    --facebook-color: #3b5999;
+    --instagram-color: #e1306c;
+    --youtube-color: #de463b;
+    --twitter-color: #46c1f6;
+    --github-color: #333;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+}
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #dadada;
+}
+.facebook{
+    --icon-color:var(--facebook-color);
+}
+.github{
+    --icon-color:var(--github-color);
+}
+.youtube{
+    --icon-color:var(--youtube-color);
+}
+.insta{
+    --icon-color:var(--instagram-color);
+}
+.icon{
+    margin: 0 60px;
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--icon-color);
+    color: var(--icon-color);
+}
+.tooltip{
+    /* display: none; */
+    position: absolute;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s;
+    pointer-events: none;
+    top: 0;
+    opacity: 0;
+    background-color: var(--icon-color);
+}
+.tooltip::after{
+    position: absolute;
+    top: 80%;
+    content: "";
+    display: block;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-top: 25px solid var(--icon-color);
+}
+.facebook:hover .tooltip, .github:hover .tooltip, .youtube:hover .tooltip,.insta:hover .tooltip{
+    top: -75px;
+    opacity: 1;
+}
+.icon:hover{
+    background-color: var(--icon-color);
+    color: #fff;
+}
